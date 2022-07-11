@@ -11,15 +11,13 @@ const App = () => {
   const [query, setQuery] = useState('')
   const API_KEY = '28554816-1dcc1d278d103e9e16d599a07'
 
+  
   useLayoutEffect(() => {
     const fetchItems = async () => {
       setIsLoading(true)
       const result = await axios(
         `https://pixabay.com/api/?key=${API_KEY}&q=${query}&image_type=photo&per_page=48`
       )
-
-      console.log(result.data)
-
       setImages(result.data.hits)
       setIsLoading(false)
     }
@@ -34,7 +32,7 @@ const App = () => {
   return (
     <div className='container'>
       <Header />
-      <SearchBar getQuery={queryFunction} />
+      <SearchBar getQuery={(queryFunction)} />
       <ImageGrid isLoading={isLoading} images={images} />
     </div>
   )

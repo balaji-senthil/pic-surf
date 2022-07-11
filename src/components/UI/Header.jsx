@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <header className='center'>
-      Photo Surf
+      <h1>Pic Surf App</h1>
     </header>
   )
 }
