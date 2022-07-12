@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Header from '../src/components/UI/Header'
 import './App.css'
@@ -12,7 +12,7 @@ const App = () => {
   const API_KEY = '28554816-1dcc1d278d103e9e16d599a07'
 
   
-  useLayoutEffect(() => {
+  useEffect(() => {
     const fetchItems = async () => {
       setIsLoading(true)
       const result = await axios(
