@@ -14,7 +14,7 @@ const ImageGrid = ({ isLoading, images, query }) => {
           {
             images.length
             ?(images.map((image) => (
-                <Image key={image.id} image={image}></Image>
+                <Image image={image}></Image>
               )))
             :<div className='center'>{queryNotFoundMessage(query)}</div>
           }
