@@ -2,7 +2,7 @@ import React from 'react'
 import Image from './Image'
 import Loader from '../../UI/Loader'
 
-var queryNotFoundMessage = (query) =>{
+const queryNotFoundMessage = (query) =>{
     return(`Your search '${query}' did not match any images.`)
 }
 
@@ -14,7 +14,7 @@ const ImageGrid = ({ isLoading, images, query }) => {
           {
             images.length
             ?(images.map((image) => (
-                <Image image={image}></Image>
+                <Image key ={image.id} image={image}></Image>
               )))
             :<div className='center'>{queryNotFoundMessage(query)}</div>
           }

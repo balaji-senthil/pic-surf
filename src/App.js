@@ -32,7 +32,7 @@ const App = () => {
   return (
     <div className='container'>
       <Header />
-      <SearchBar getQuery={(queryFunction)} />
+      <SearchBar setQuery={(queryFunction)} />
       <ImageGrid isLoading={isLoading} images={images} query={query}/>
     </div>
   )
