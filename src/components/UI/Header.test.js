@@ -4,6 +4,6 @@ import Header from './Header';
 
 test('render Header Component', () => {
   render(<Header />);
-  const linkElement = screen.getByText(/Pic surf app/i);
+  const linkElement = screen.getByText(/Pic surf/i);
   expect(linkElement).toBeInTheDocument();
 });

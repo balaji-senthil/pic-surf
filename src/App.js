@@ -33,7 +33,7 @@ const App = () => {
     <div className='container'>
       <Header />
       <SearchBar getQuery={(queryFunction)} />
-      <ImageGrid isLoading={isLoading} images={images} />
+      <ImageGrid isLoading={isLoading} images={images} query={query}/>
     </div>
   )
 }

@@ -4,14 +4,13 @@ import SearchBar from './SearchBar'
 
 test("render SearchBar", () => {
     render(<SearchBar />);
-    const placeHolder = screen.getByPlaceholderText(/what are you upto/i);
+    const placeHolder = screen.getByPlaceholderText(/try me/i);
     expect(placeHolder.value).toBe("");
-    console.log(placeHolder.value)
   });
 
-test("search query should be empty", () => {
+test("search query should be empty on initial render", () => {
     render(<SearchBar />);
-    const searchQuery = screen.getByPlaceholderText(/what are you upto/i);
+    const searchQuery = screen.getByPlaceholderText(/try me/i);
     expect(searchQuery.value).toEqual('')
   });
 

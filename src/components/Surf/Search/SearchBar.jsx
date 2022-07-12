@@ -7,14 +7,13 @@ const SearchBar = ({ getQuery }) => {
     setText(q)
     getQuery(q)
   }
-
   return (
     <section className='search'>
       <form>
         <input
           type='text'
           className='form-control'
-          placeholder='What are you upto?'
+          placeholder='Try me!'
           value={text}
           onChange={(e) => onChange(e.target.value)}
           autoFocus
